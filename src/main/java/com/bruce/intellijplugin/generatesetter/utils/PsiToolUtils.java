@@ -88,9 +88,15 @@ public class PsiToolUtils {
         if (newImportList.size() > 0) {
             Iterator<String> iterator = newImportList.iterator();
             while (iterator.hasNext()) {
-                String u = iterator.next();
-                if (u.startsWith("java.lang")) {
+                String type = iterator.next();
+                if (type.startsWith("java.lang")) {
                     iterator.remove();
+                }else {
+                    try {
+                        Class.forName("java.lang."+type);
+                        iterator.remove();
+                    } catch (Exception e) {
+                    }
                 }
             }
         }
@@ -108,6 +114,7 @@ public class PsiToolUtils {
                     newImportText.append("\nimport " + newImport + ";");
                 }
             }
+            newImportText.append("\n");
             PsiPackageStatement packageStatement = javaFile.getPackageStatement();
             int start = 0;
             if (packageStatement != null) {

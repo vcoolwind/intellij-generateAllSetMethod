@@ -1,5 +1,4 @@
-
-import BigDecimal;import java.math.BigDecimal;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -87,7 +86,7 @@ public class Article {
         article.setCreateTime(new Date());
         article.setUpdateTime(new Date());
         article.setHasMore(false);
-        article.setPriority(new BigDecimal());
+        article.setPriority(new BigDecimal("0"));
 
     }
 

@@ -21,6 +21,8 @@ import com.intellij.testFramework.fixtures.LightCodeInsightFixtureTestCase;
  */
 public abstract class BaseTest extends LightCodeInsightFixtureTestCase {
 
+    public static final String CARET = "<caret>";
+
     @Override
     protected void setUp() throws Exception {
         super.setUp();

@@ -26,6 +26,11 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <strong>2.8.4</strong>
+        <ul>
+            <li>[NEW]support generate dto from Variable in method </li>
+            <li>[NEW]support generate dto from this-object in method</li>
+        </ul>
         <strong>2.8.3</strong>
         <ul>
             <li>[FIX]Must not start write action from within read action in the other thread - deadlock is coming</li>
